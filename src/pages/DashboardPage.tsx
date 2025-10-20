@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "../supabaseClient";
 
 export const DashboardPage = () => {
@@ -41,6 +41,9 @@ export const DashboardPage = () => {
       <p>Welcome, {userData.name || "User"}!</p>
       <p>Your role: {userData.role || "Unknown"}</p>
       <button onClick={handleLogout}>Logout</button>
+      <Link to="/chat">
+        <button>Ir al Chat IA</button>
+      </Link>
     </div>
   );
 };

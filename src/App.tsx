@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { AdminDashboardPage } from "./pages/AdminDashboardPage";
+import { ChatIA } from "./pages/ChatIA";
 import { DashboardPage } from "./pages/DashboardPage";
 import { LandingPage } from "./pages/LandingPage";
 import { LoginPage } from "./pages/LoginPage";
@@ -90,6 +91,8 @@ function App() {
         {/* Ruta para páginas no encontradas */}
         <Route path="/404" element={<NotFound />} />
         <Route path="*" element={<Navigate to="/404" replace />} />
+
+        <Route path="/chat" element={<ChatIA />} />
       </Routes>
     </BrowserRouter>
   );
